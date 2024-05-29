@@ -7,8 +7,11 @@ function App() {
   // const root = createRoot(container);
   
   const title = "";
-  const animalFacts = <h1>{title === "" ? "Click an animal for a fun fact" : title}</h1>;
-  console.log(title === "" ? "Click an animal for a fun fact" : title);
+  const background = <img className="background" alt="ocean" src="/files/images/ocean.jpg" />;
+  const animalFacts = (<div>
+    <h1>{title === "" ? "Click an animal for a fun fact" : title}</h1>
+    {background}
+  </div>);
   
   // root.render(animalFacts);
   return animalFacts;
