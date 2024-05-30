@@ -18,6 +18,7 @@ function App() {
       src={animals[animal].image}
       aria-label={animal}
       role='button'
+      onClick={displayFact}
     />)
   };
 
@@ -27,10 +28,18 @@ function App() {
     <div className="animals">
       {images}
     </div>
+    <p id="fact"></p>
   </div>);
   
   // root.render(animalFacts);
   return animalFacts;
 }
 
+function displayFact(e) {
+  const name = e.target.alt;
+  const index = Math.floor(Math.random()*3);
+  const funfact = animals[name].facts[index];
+
+  document.getElementById('fact').innerHTML = funfact;
+}
 export default App;
