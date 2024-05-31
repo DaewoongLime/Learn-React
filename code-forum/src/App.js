@@ -1,7 +1,8 @@
-import './App.css';
+import React from 'react';
+import {comments} from './commentData'
 
 function App() {
-  return <h1>Hello Word</h1>;
-}
+  comments.map(comment => <Card commentObject={comment}/>)
+};
 
 export default App;
